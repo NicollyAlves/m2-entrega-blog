@@ -1,0 +1,8 @@
+:root {
+    --darckblue: #5C5D8D;
+    --blue: #6495ED;
+    --grey: #C3C3C3;
+    --white: #FFFFFF;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800&display=swap');
