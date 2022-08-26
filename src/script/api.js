@@ -18,7 +18,7 @@ export class Api {
         .then(res => res.json())
         .then(res => {
             localStorage.setItem("@kenzieBlog:token", res.token)
-            localStorage.setItem("@kenzieBlog:userId", res.rest.id)
+            localStorage.setItem("@kenzieBlog:userId", res.id)
             window.location.assign("../HTML.homePage.html")
             return res
         })
