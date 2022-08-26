@@ -110,6 +110,7 @@ main {
     main {
         flex-direction: row;
         justify-content: space-around;
+        margin-top: 6rem;
     }
     .Main--Cadastro{
         margin-right: 2rem;
