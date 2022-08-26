@@ -1,0 +1,118 @@
+body {
+    background-color: var(--darckblue);
+    font-family: 'Inter', sans-serif;
+    margin: 5rem 5rem;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.Main--Cadastro {
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    width: 21rem;
+    height: 28rem;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 4rem;
+    border-radius: 10px;
+}
+
+.Main--Cadastro > h2 {
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.Main--Cadastro > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--grey);
+    width: 100%;
+    height: 80%;
+}
+
+.Main--Cadastro > form > input {
+    margin-top: 1rem;
+    width: 80%;
+    height: 13%;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.Main--Cadastro > form > button {
+    margin-top: 2rem;
+    border-style: none;
+    width: 152px;
+    height: 38px;
+    border-radius: 20px;
+    background-color: var(--darckblue);
+    color: var(--white);
+    font-size: 16px;
+}
+
+.Main--Loggin {
+    background-color: var(--blue);
+    display: flex;
+    flex-direction: column;
+    width: 21rem;
+    height: 18rem;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 10px;
+}
+
+.Main--Loggin >h2 {
+    font-weight: 700;
+    font-size: 35px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--white);
+}
+
+.Main--Loggin > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--grey);
+    width: 100%;
+    height: 80%;
+}
+
+.Main--Loggin > form > input {
+    margin-top: 1rem;
+    width: 80%;
+    height: 20%;
+    border-style: none;
+    border-radius: 10px;
+}
+
+.Main--Loggin > form > button {
+    margin-top: 2rem;
+    border-style: none;
+    width: 152px;
+    height: 38px;
+    border-radius: 20px;
+    background-color: var(--darckblue);
+    color: var(--white);
+    font-size: 16px;
+}
+
+@media (min-width: 768px) {
+    main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .Main--Cadastro{
+        margin-right: 2rem;
+        margin-top: 0;
+    }
+}
