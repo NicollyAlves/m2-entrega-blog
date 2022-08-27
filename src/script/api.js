@@ -8,7 +8,7 @@ export class Api {
         Authorization: `Bearer ${this.token}`
     }
 
-    static async login(body) {
+    static async loginUser(body) {
         
         const userLogin = await fetch(`${this.baseUrl}/users/login`, {
             method: "POST", 
@@ -18,8 +18,13 @@ export class Api {
         .then(res => res.json())
         .then(res => {
             localStorage.setItem("@kenzieBlog:token", res.token)
-            localStorage.setItem("@kenzieBlog:userId", res.id)
-            window.location.assign("../HTML.homePage.html")
+            localStorage.setItem("@kenzieBlog:userId", res.userId)
+
+            if(res.token !== undefined){
+                window.location.assign("../../src/HTML/homePage.html")
+            }
+            
+            console.log(res);
             return res
         })
         .catch(err => console.log(err))
@@ -27,15 +32,19 @@ export class Api {
         return userLogin
     }
 
-    static async createUser() {
-        const users = await fetch(`${this.baseUrl}/users/register`, {
-            method: "GET",
-            headers: this.headers
+    static async createUser(body) {
+        const user = await fetch(`${this.baseUrl}/users/register`, {
+            method: "POST",
+            headers: {
+                "Content-type": "application/json"
+            },
+            body: JSON.stringify(body)
         })
         .then(res => res.json())
+        .then(res => console.log(res))
         .catch(err => console.log(err))
 
-        return users
+        return user
     }
 
     static async getUser() {
