@@ -26,11 +26,11 @@ export class Api {
             
             console.log(res);
 
-            localStorage.setItem("@kenzieBlog:userId", res.id)
-            window.location.assign("../HTML.homePage.html")
+            localStorage.setItem("@kenzieBlog:userId", res.userId)
+            window.location.assign("../../src/HTML/homePage.html")
             return res
         })
-        .catch(err => console.log(err))
+        .catch(err => (err))
     
         return userLogin
     }
@@ -55,8 +55,9 @@ export class Api {
             method: "GET", 
             headers: this.headers
         })
-        const data = posts.json()
-        return data
+        .then ((resp) => resp.json())
+        //.then ((resp) => console.log(resp))
+        return posts 
     }
 
     static async getPostByPage(page = Api.urlPage) {
@@ -65,8 +66,7 @@ export class Api {
             headers: this.headers
         })
         .then(res => res.json())
-        // .then(res => console.log(res))
-        // .catch(err => console.log(err))
+
         return pages
     }
 
