@@ -1,6 +1,7 @@
 import { Api } from "../api.js";
 import { Render } from "../render.js"
 
+<<<<<<< HEAD
 
 export async function renderizarPost () {
     const arrPost = await Api.getPostByPage()
@@ -16,3 +17,16 @@ await renderizarPost()
     }
 }
 RenderizarPost.renderiza()*/
+=======
+async function renderizarPost () {
+    const arrPost = await Api.getPostByPage()
+    Render.renderPostList(arrPost)
+}
+renderizarPost()
+
+async function getUser () {
+    const user = await Api.getUser()
+    Render.creatUserInf(user)
+}
+getUser()
+>>>>>>> origin/develop

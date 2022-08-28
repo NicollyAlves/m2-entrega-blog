@@ -1,4 +1,5 @@
 export class Render {
+
     static renderPostList (arrPost) {
         const divPost = document.getElementsByClassName("Main--SectionPost--Post")[0]
 
@@ -59,4 +60,40 @@ export class Render {
         return newDiv1
     }
 
+
+    static creatUserInf (userInf) {
+
+        let header = document.querySelector("header")
+
+        let newSec  = document.createElement("section")
+        let newDiv1 = document.createElement("div")
+        let newDiv2 = document.createElement("div")
+        let newImg  = document.createElement("img")
+        let newH3   = document.createElement("h3")
+        let newBtn  = document.createElement("button")
+
+        newSec.classList.add("Header")
+        newDiv1.classList.add("Header--UserInfo")
+        newImg.id = ("img--header")
+        newImg.src = userInf.avatarUrl
+        newImg.alt = `foto do ${userInf.username}`
+        newH3.innerText = userInf.username
+        newBtn.innerText = ("Logout")
+
+        newDiv2.append(newImg)
+        newDiv1.append(newDiv2, newH3)
+        newSec.append(newDiv1, newBtn)
+        header.append(newSec)
+        
+    }
+
 }
+
+
+//            <div class="Header--UserInfo">
+//                <div>
+//                    <img id="img--header" src="../image 4.png" alt="">
+//                </div>
+//                <h3>User Name</h3>
+//            </div>
+//            <button>Logout</button>
