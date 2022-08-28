@@ -20,13 +20,13 @@ export class Api {
             localStorage.setItem("@kenzieBlog:token", res.token)
             localStorage.setItem("@kenzieBlog:userId", res.userId)
 
-            if(res.token !== undefined){
+            if(res.token !== undefined && res.userId !== undefined){
                 window.location.assign("../../src/HTML/homePage.html")
             }
             
             console.log(res);
 
-            localStorage.setItem("@kenzieBlog:userId", res.id)
+            localStorage.setItem("@kenzieBlog:userId", res.userId)
             window.location.assign("../../src/HTML/homePage.html")
             return res
         })
@@ -65,8 +65,8 @@ export class Api {
             headers: this.headers
         })
         .then(res => res.json())
-        // .then(res => console.log(res))
-        // .catch(err => console.log(err))
+        //.then(res => console.log(res))
+        //.catch(err => console.log(err))
         return pages
     }
 
@@ -76,7 +76,8 @@ export class Api {
             headers: this.headers,
             body: JSON.stringify(body)
         })
-        .then(res => console.log(res.json()))
+        .then(res => res.json())
+        .then(res => console.log(res))
         .catch(err => console.log(err))
 
         return post
