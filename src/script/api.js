@@ -25,10 +25,13 @@ export class Api {
             }
             
             console.log(res);
+
+            localStorage.setItem("@kenzieBlog:userId", res.id)
+            window.location.assign("../HTML.homePage.html")
             return res
         })
         .catch(err => console.log(err))
-        
+    
         return userLogin
     }
 
@@ -48,7 +51,7 @@ export class Api {
     }
 
     static async getUser() {
-        const posts = await fetch(`${this.baseUrl}/users/${id}`, {
+        const posts = await fetch(`${this.baseUrl}/users/${localStorage.getItem("@kenzieBlog:userId")}`, {
             method: "GET", 
             headers: this.headers
         })
@@ -62,9 +65,8 @@ export class Api {
             headers: this.headers
         })
         .then(res => res.json())
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
-
+        // .then(res => console.log(res))
+        // .catch(err => console.log(err))
         return pages
     }
 
