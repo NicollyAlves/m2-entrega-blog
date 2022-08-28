@@ -1,4 +1,4 @@
-export class ModalEdit {
+export class Modal {
     
     static showModalEdit() {
         const btnEdit = document.querySelectorAll(".editButton")
