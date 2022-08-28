@@ -74,9 +74,10 @@ export class Api {
             headers: this.headers,
             body: JSON.stringify(body)
         })
+        .then(res => console.log(res.json()))
+        .catch(err => console.log(err))
 
-        const data = await post.json()
-        return data
+        return post
     }
 
     static async updatePost(data, id) {
@@ -85,6 +86,9 @@ export class Api {
             headers: this.headers,
             body: JSON.stringify(data)
         })
+        .then(res => console.log(res.json()))
+        .catch(err => console.log(err))
+
         return post
     }
 
