@@ -27,6 +27,7 @@ export class Api {
             console.log(res);
 
             localStorage.setItem("@kenzieBlog:userId", res.userId)
+
             window.location.assign("../../src/HTML/homePage.html")
             return res
         })

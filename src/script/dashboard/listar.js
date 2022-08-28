@@ -7,8 +7,6 @@ async function renderizarPost () {
 }
 renderizarPost()
 
-
-
 async function getUser () {
     const user = await Api.getUser()
     Render.creatUserInf(user)
