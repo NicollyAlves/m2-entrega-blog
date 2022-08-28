@@ -102,12 +102,23 @@ main {
     justify-content: space-around;
 }
 
-.Post > h3 {
-    font-weight: 700;
-    font-size: 24px;
+.img-name-text > img {
+    width: 122px;
+    height: 118px;
+    border-radius: 50%;
 }
 
-.Post > div > button {
+.name-text > h3 {
+    font-weight: 700;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.name-text > p {
+    margin-top: 5px;
+}
+
+#btn-edit-delet > button {
     border: none;
 }
 

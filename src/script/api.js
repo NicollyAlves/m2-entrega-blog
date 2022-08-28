@@ -19,11 +19,11 @@ export class Api {
         .then(res => {
             localStorage.setItem("@kenzieBlog:token", res.token)
             localStorage.setItem("@kenzieBlog:userId", res.id)
-            // window.location.assign("../HTML.homePage.html")
+            //window.location.assign("../HTML.homePage.html")
             return res
         })
         .catch(err => console.log(err))
-        
+    
         return userLogin
     }
 
@@ -39,7 +39,7 @@ export class Api {
     }
 
     static async getUser() {
-        const posts = await fetch(`${this.baseUrl}/users/${id}`, {
+        const posts = await fetch(`${this.baseUrl}/users/${localStorage.getItem("@kenzieBlog:userId")}`, {
             method: "GET", 
             headers: this.headers
         })
