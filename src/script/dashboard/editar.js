@@ -1,5 +1,6 @@
 import { Api } from "../api.js";
 import { Modal } from "../modals/modals.js";
+import { Render } from "../render.js";
 
 class Edit {
     
@@ -21,7 +22,7 @@ class Edit {
             localStorage.removeItem("@kenzieBlog:itemId")
 
             const post = await Api.getPostByPage()
-            //COLOCAR MÉTODO QUE RENDERIZA NOSSO POST
+            Render.renderPostList(post)
             Modal.showModalEdit()
             Modal.closeModalEdit()
         })
@@ -31,4 +32,3 @@ class Edit {
 Modal.showModalEdit()
 Modal.closeModalEdit()
 Edit.updatePost()
-
