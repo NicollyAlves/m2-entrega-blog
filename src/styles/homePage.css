@@ -70,7 +70,7 @@ main {
     background-color:  #ECF0F1;
     padding-left: 5%;
 } 
- 
+
 .Main--Section--Postar > button{
     border: none;
     background-color: #ECF0F1;
@@ -111,6 +111,7 @@ main {
     border: none;
 }
 
+
 @media (min-width: 768px) {
     .Main--Section--Postar{
         max-width: 52.5%;
@@ -142,4 +143,4 @@ main {
     #btn-edit-delet > button {
         border: none;
     }
-}
+} 

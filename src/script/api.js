@@ -19,7 +19,7 @@ export class Api {
         .then(res => {
             localStorage.setItem("@kenzieBlog:token", res.token)
             localStorage.setItem("@kenzieBlog:userId", res.id)
-            window.location.assign("../HTML.homePage.html")
+            // window.location.assign("../HTML.homePage.html")
             return res
         })
         .catch(err => console.log(err))
@@ -53,9 +53,8 @@ export class Api {
             headers: this.headers
         })
         .then(res => res.json())
-        .then(res => console.log(res))
-        .catch(err => console.log(err))
-
+        // .then(res => console.log(res))
+        // .catch(err => console.log(err))
         return pages
     }
 
