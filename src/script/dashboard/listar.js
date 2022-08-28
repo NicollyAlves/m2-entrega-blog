@@ -7,4 +7,4 @@ async function renderizarPost () {
     const arrPost = await Api.getPostByPage()
     Render.renderPostList(arrPost)
 }
-//renderizarPost()
+renderizarPost()
