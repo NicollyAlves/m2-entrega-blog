@@ -27,8 +27,7 @@ export class Api {
             console.log(res);
 
             localStorage.setItem("@kenzieBlog:userId", res.userId)
-
-            //window.location.assign("../../src/HTML/homePage.html")
+            
             return res
         })
         .catch(err => (err))
@@ -67,6 +66,7 @@ export class Api {
             headers: this.headers
         })
         .then(res => res.json())
+        .then(res => res)
 
         return pages
     }
@@ -77,7 +77,8 @@ export class Api {
             headers: this.headers,
             body: JSON.stringify(body)
         })
-        .then(res => console.log(res.json()))
+        .then(res => res.json())
+        .then(res => (res))
         .catch(err => console.log(err))
 
         return post
@@ -101,10 +102,7 @@ export class Api {
             headers: this.headers
         })
         .then(res => res.json())
-        .then(res => {
-            alert("post removido com sucesso")
-            return res
-        })
+        .then(res => res)
         .catch(err => console.log(err))
 
         return post
