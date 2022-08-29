@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/reset.css">
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/homePage.css">
+  <link rel="stylesheet" href="../styles/editModal.css">
+  <link rel="stylesheet" href="../styles/deleteModal.css">
+  <title>m2-entrega-blog-m2</title>
+</head>
+<body>
+    <header>
+        <!--<section class="Header">
+            <div class="Header--UserInfo">
+                <div>
+                    <img id="img--header" src="../image 4.png" alt="">
+                </div>
+                <h3>User Name</h3>
+            </div>
+            <button>Logout</button>
+        </section>-->
+    </header>
+    <main>
+        <section class="Main--Section--Postar">
+            <input type="text" id="text" placeholder="No que está pensando?">
+            <button><img class="buttonPost" id="buttonPost" src="../Button.png" alt=""></button>
+        </section>
+        <section>
+            <div class="Main--SectionPost--Post">
+                <div class="Post">
+                    <div class="img-name-text">
+                        <img src="../image 4.png" alt="">
+                        <div class="name-text">
+                            <h3>User Name</h3>
+                            <p id="mensagem">
+                            Lorem ipsum dolor sit amet. Et iste labore ut similique consequuntur et consequuntur harum est repellendus quia 33 tempore similique. Nam reprehenderit vero eos maxime consequatur At nihil facere vel quam nemo eum perspiciatis maiores qui atque quia. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="data-btn">
+                        <p id="data">
+                            22/08/2022
+                        </p>
+                        <div id="btn-edit-delet">
+                            <button class="editButton"><img src="../edit.png" alt=""></button>
+                            <button class="deleteButton"><img src="../trash-bin 1.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="Post">
+                    <div class="img-name-text">
+                        <img src="../image 4.png" alt="">
+                        <div class="name-text">
+                            <h3>User Name</h3>
+                            <p id="mensagem">
+                            Lorem ipsum dolor sit amet. Et iste labore ut similique consequuntur et consequuntur harum est repellendus quia 33 tempore similique. Nam reprehenderit vero eos maxime consequatur At nihil facere vel quam nemo eum perspiciatis maiores qui atque quia. 
+                            </p>
+                        </div>
+                    </div>
+                    <div class="data-btn">
+                        <p id="data">
+                            22/08/2022
+                        </p>
+                        <div id="btn-edit-delet">
+                            <button class="editButton"><img src="../edit.png" alt=""></button>
+                            <button class="deleteButton"><img src="../trash-bin 1.png" alt=""></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="editModal" class="modal hidden">
+        <form class="modal_form">
+            <span id="closeBtnEdit" class="closeBtnEdit" class="modal_edit_close">X</span>
+            <label for="editar" class="tituloEditar">Editar</label>
+            <textarea name="text" id="editar" placeholder="Estou mudando meu comentário"></textarea>
+            <button type="submit" id="submitEditar" class="submitEditar">Enviar</button>
+        </form>
+    </div>
+    <!--<div id="deleteModal" class="modal hidden">
+        <form class="modal_form delete">
+            <span id="closeBtn" class="modal_edit_close">X</span>
+            <label for="deletar" class="tituloDeletar">Deseja deletar esse poster?</label>
+            <button type="submit" id="submitDeletar" class="submitDeletar">Deletar</button>
+        </form>
+    </div>-->
+    <script type="module" src="../script/dashboard/listar.js"></script>
+    <script type="module" src="../script/dashboard/criarPost.js"></script>
+    <script type="module" src="../../src/script/dashboard/editar.js"></script>
+</body>
+</html>
+

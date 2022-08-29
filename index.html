@@ -1,12 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./src/styles/reset.css">
+  <link rel="stylesheet" href="./src/styles/style.css">
+  <link rel="stylesheet" href="./src/styles/index.css">
   <title>m2-entrega-blog-m2</title>
 </head>
+
 <body>
-  
+  <main class="Main">
+    <section class="Main--Cadastro">
+      <h2>Cadastro</h2>
+      <form>
+        <input type="text" id="name" placeholder="Nome Do Usuário">
+        <input type="email" name="email" id="email" placeholder="Email">
+        <input type="text" id="picture" placeholder="Foto De Perfil">
+        <input type="password" name="password" id="password" placeholder="Senha">
+        <button type="submit" id="btnSignUp">Cadastrar</button>
+      </form>
+    </section>
+    <section class="Main--Loggin">
+      <h2>Entrar</h2>
+      <form>
+        <input type="email" name="email" id="emailLogin" placeholder="Email">
+        <input type="password" name="password" id="passwordLogin" placeholder="Senha">
+        <button type="submit" id="btnLogin">Entrar</button>
+      </form>
+    </section>
+  </main>
+
+  <script type="module" src="./src/script/singUp.js"></script>
 </body>
 </html>
