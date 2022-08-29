@@ -1,15 +1,21 @@
+
 export class Modal {
     
     static showModalEdit() {
+
         const btnEdit = document.querySelectorAll(".editButton")
         const modal = document.getElementById("editModal")
 
         btnEdit.forEach((button) => {
             button.addEventListener("click", (event) => {
-                localStorage.setItem("@kenzieBlog:postId", event.target.id)
+                console.log("oi");
+                localStorage.setItem("@kenzieBlog:itemId", event.itemId)
+                localStorage.getItem("@kenzieBlog:itemId")
+
                 modal.classList.toggle("hidden")
             })
         })
+        console.log(btnEdit);
     }
     
     static closeModalEdit() {

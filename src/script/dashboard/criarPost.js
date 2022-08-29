@@ -13,9 +13,10 @@ export class Create {
                 content: post.value
             }
 
-            await Api.newPost(data)
-            const posts = await Api.getPostByPage()
-            console.log(posts)
+            const newPost = await Api.newPost(data)
+            console.log(newPost);
+
+            Render.renderOwnPost(newPost)
         })
     }
 }

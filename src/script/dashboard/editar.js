@@ -2,7 +2,7 @@ import { Api } from "../api.js";
 import { Modal } from "../modals/modals.js";
 import { Render } from "../render.js";
 
-class Edit {
+export class Edit {
     
     static updatePost() {
         const updateBtn = document.getElementById("submitEditar")
@@ -10,6 +10,8 @@ class Edit {
         const postEditDescription = document.getElementById("editar")
 
         updateBtn.addEventListener("click", async (event) => {
+            console.log("oi")
+
             event.preventDefault()
             const updateIdPost = localStorage.getItem("@kenzieBlog:itemId")
 
@@ -21,8 +23,11 @@ class Edit {
             modal.classList.add("hidden")
             localStorage.removeItem("@kenzieBlog:itemId")
 
-            const post = await Api.getPostByPage()
-            Render.renderPostList(post)
+            //const newPost = await Api.newPost(data)
+            //console.log(newPost);
+
+            //Render.renderOwnPost(newPost)
+
             Modal.showModalEdit()
             Modal.closeModalEdit()
         })
