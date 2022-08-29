@@ -57,6 +57,7 @@ main {
     background-color: var(--darckblue);
     color: var(--white);
     font-size: 16px;
+    cursor: pointer;
 }
 
 .Main--Loggin {
@@ -104,6 +105,7 @@ main {
     background-color: var(--darckblue);
     color: var(--white);
     font-size: 16px;
+    cursor: pointer;
 }
 
 @media (min-width: 768px) {

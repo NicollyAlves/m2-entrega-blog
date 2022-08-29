@@ -9,8 +9,9 @@ export class Modal {
         btnEdit.forEach((button) => {
             button.addEventListener("click", (event) => {
                 console.log("oi");
+
                 localStorage.setItem("@kenzieBlog:itemId", event.itemId)
-                localStorage.getItem("@kenzieBlog:itemId")
+                //localStorage.getItem("@kenzieBlog:itemId")
 
                 modal.classList.toggle("hidden")
             })
@@ -32,7 +33,8 @@ export class Modal {
         const modal = document.getElementById("deleteModal")
 
         btnDelete.forEach((button) => {
-            button.addEventListener("click", () => {
+            button.addEventListener("click", (event) => {
+                localStorage.setItem("@kenzieBlog:itemId", event.itemId)
                 modal.classList.toggle("hidden")
             })
         })

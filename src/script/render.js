@@ -65,7 +65,7 @@ export class Render {
     }
 
     static renderOwnPost(post) {
-        const divPost = document.querySelector(".Main--SectionPost--Post")
+        const divPost = document.getElementsByClassName("Main--SectionPost--Post")
         
         const postCard = Render.createOwnPost(post)
         
@@ -117,13 +117,10 @@ export class Render {
             newBtn1.classList.add("editButton")
             newBtn2.classList.add("deleteButton")
 
-            newBtn1 = post.id
-            newBtn2 = post.id
+            newBtn1 = post.user.id
+            newBtn2 = post.user.id
 
-
-            newBtn1.key = post.key
-            newBtn2.key = post.key
-
+            console.log(post.user.id);
             newBtn1.append(newImg2)
             newBtn2.append(newImg3)
             newDiv5.append(newBtn1, newBtn2)
@@ -160,12 +157,3 @@ export class Render {
     }
 
 }
-
-
-//            <div class="Header--UserInfo">
-//                <div>
-//                    <img id="img--header" src="../image 4.png" alt="">
-//                </div>
-//                <h3>User Name</h3>
-//            </div>
-//            <button>Logout</button>

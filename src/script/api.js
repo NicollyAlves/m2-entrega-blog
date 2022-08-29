@@ -26,8 +26,8 @@ export class Api {
             
             console.log(res);
 
-            //localStorage.setItem("@kenzieBlog:userId", res.userId)
-
+            localStorage.setItem("@kenzieBlog:userId", res.userId)
+            
             return res
         })
         .catch(err => (err))
@@ -102,10 +102,7 @@ export class Api {
             headers: this.headers
         })
         .then(res => res.json())
-        .then(res => {
-            alert("post removido com sucesso")
-            return res
-        })
+        .then(res => res)
         .catch(err => console.log(err))
 
         return post
