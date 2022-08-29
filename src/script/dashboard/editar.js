@@ -23,10 +23,10 @@ export class Edit {
             modal.classList.add("hidden")
             localStorage.removeItem("@kenzieBlog:itemId")
 
-            //const newPost = await Api.newPost(data)
+            const newPost = await Api.getPostByPage(data)
             //console.log(newPost);
 
-            //Render.renderOwnPost(newPost)
+            Render.renderOwnPost(newPost)
 
             Modal.showModalEdit()
             Modal.closeModalEdit()

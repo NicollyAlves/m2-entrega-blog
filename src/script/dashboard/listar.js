@@ -8,6 +8,12 @@ export async function renderizarPost () {
 }
 renderizarPost()
 
+export async function renderizarOwnPost () {
+    const arrPost = await Api.newPost()
+    Render.renderOwnPost(arrPost)
+}
+renderizarOwnPost()
+
 async function getUser () {
     const user = await Api.getUser()
     Render.creatUserInf(user)
