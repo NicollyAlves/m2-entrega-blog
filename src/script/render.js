@@ -88,12 +88,3 @@ export class Render {
     }
 
 }
-
-
-//            <div class="Header--UserInfo">
-//                <div>
-//                    <img id="img--header" src="../image 4.png" alt="">
-//                </div>
-//                <h3>User Name</h3>
-//            </div>
-//            <button>Logout</button>

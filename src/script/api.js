@@ -28,7 +28,7 @@ export class Api {
 
             localStorage.setItem("@kenzieBlog:userId", res.userId)
 
-            window.location.assign("../../src/HTML/homePage.html")
+            //window.location.assign("../../src/HTML/homePage.html")
             return res
         })
         .catch(err => (err))
